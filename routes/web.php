@@ -15,11 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 //homepage route
 Route::get('/', function(){
-    $props = [
-        'name' => 'Riccardo',
-        'lastname' => 'Binotto',
-        'poweredBy' => 'Laravel'
-    ];
+    return(view('home'));
+}) -> name('home');
 
-    return(view('home', $props));
-});
+Route::get('/contacts', function(){
+    return(view('contacts'));
+})->name('contacts');
