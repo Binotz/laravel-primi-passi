@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//homepage route
+Route::get('/', function(){
+    $props = [
+        'name' => 'Riccardo',
+        'lastname' => 'Binotto',
+        'poweredBy' => 'Laravel'
+    ];
+
+    return(view('home', $props));
 });
